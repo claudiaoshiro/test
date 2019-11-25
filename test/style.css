@@ -1,0 +1,111 @@
+
+.sidebarL {
+    grid-area: sidebarL;
+    background-color: lightblue;
+}
+
+.sidebarR {
+    grid-area: sidebarR;
+    background-color: #ffdc9c;
+}
+
+.content {
+    grid-area: content;
+    background-color: #654321;
+}
+
+.header {
+    grid-area: header;
+    background-color: #ffdc9c;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ffdc9c;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-areas: "header" "sidebarL" "content" "sidebarR" "footer";
+    
+}
+
+@media screen and (min-width: 320px) {
+    .wrapper {
+        grid-template-areas: "header header header" "sidebarL sidebarL sidebarL" "content content content" "sidebarR sidebarR" "footer footer footer";
+    }
+
+    .sidebarL {
+        margin:10px 0px;
+    }
+    
+    .sidebarR {
+        margin:10px 0px;
+    }
+    
+    .content {
+        margin:0px;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .wrapper {
+        grid-template-columns: 20% 60%;
+        grid-template-areas: "header header header" "sidebarL content content" "sidebarR sidebarR sidebarR" "footer footer footer";
+    }
+
+    .sidebarL {
+        margin:10px 0px;
+    }
+    
+    .sidebarR {
+        margin:0px 0px 10px 0px;
+    }
+    
+    .content {
+        margin:10px 0px 10px 10px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .wrapper{
+        grid-template-areas: "header header header" " sidebarL content sidebarR" "sidebarL content sidebarR" "footer footer footer";
+    }
+
+    .sidebarL {
+        margin:10px 10px 10px 0px;
+    }
+    
+    .sidebarR {
+        margin:10px 0px 10px 10px;
+    }
+    
+    .content {
+        margin:10px 0px 10px 0px;
+    }
+}
+
+.box,
+header,
+footer {
+   
+    padding: 10px;
+}
+
+h3, p, li, span {
+    color:white;
+}
+
+a{
+    color: orangered;
+    text-decoration: none;
+}
+
+li{
+    list-style:none;
+}
+
+a:hover{
+    color:orange;
+}
+
